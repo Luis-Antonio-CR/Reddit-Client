@@ -1,20 +1,53 @@
+/* ! Base Style */
+
+.normal_text{ font-size: 20px; }
+.medium_text{ font-size: 25px; }
+
 .body {
     font-family: 'Poppins', sans-serif;
     display: grid;
     grid-template-rows: auto 1fr;
     grid-template-areas: "header" "main";
     height: 100vh;
-    background-color: grey;
+    background-color: lightgray;
 }
 
-.Navbar {
+.navbar {
     grid-area: "header";
-    border: 1px solid red;
+    border: 2px solid red;
     height: 80px;
-    background-color: black;
 }
 
 .main {
     grid-area: "main";
-    border: 1px solid green;
+    border: 2px solid green;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    overflow:auto;
 }
+
+.posts {
+    grid-column: 1/2;
+    border: 1px solid orange;
+}
+
+.lateralBar {
+    grid-column: 2/3;
+    
+}
+
+.categoryBar, .subbredditsBar {
+    min-height: 300px;
+    border: 1px solid yellow;
+    padding: 30px;
+}
+
+.subbredditsBar {
+    border: 1px solid pink;
+}
+
+.categoryBar ul { padding: 15px 10px; }
+.categoryBar ul li{ padding: 5px 0 }
+
+.subbredditsBar ul { padding: 15px 10px; }
+.subbredditsBar ul li{ padding: 5px 0 }
