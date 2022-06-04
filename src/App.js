@@ -1,7 +1,7 @@
 import './style/App.css';
 
 import NavBar from "./components/NavBar";
-//import PostComp from "./components/PostComponent";
+import PostComp from "./components/PostComponent";
 import CategoryBar from "./components/CategoriesBar";
 import SubredditsBar from "./components/SubredditsBar";
 
@@ -10,7 +10,10 @@ const App = () => {
       <div className='body'>
         <NavBar />
         <div className='main'>
-          <div className='posts'></div>
+          <div className='posts'>
+            <PostComp />
+            <PostComp />
+          </div>
           <div className='lateralBar'>
             <CategoryBar />
             <SubredditsBar />
