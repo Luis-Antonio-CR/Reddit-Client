@@ -14,20 +14,31 @@
 
 .navbar {
     grid-area: "header";
-    border: 2px solid red;
     height: 80px;
     background-color: white;
 
-    display: flex;
+    display: grid;
     align-items: center;
+    grid-template-columns: 1fr 5fr;
 }
 
-.navbar img{height: 90%; margin: 0 25px;}
-.navbar h2{ font-size: 20px;}
+.navbar .logo{ grid-column: 1/2; height: 80px; margin: 0 20px; display: flex; align-items: center;}
+
+.navbar .logo img{height: 90%; }
+.navbar .logo h2{ font-size: 20px;}
+
+.searchBar-text {
+    grid-column: 2/3;
+    width: 70%;
+    padding: 15px;
+    margin: 0 5%;
+    font-size: 15px;
+    border: 2px solid black;
+    outline: none;
+}
 
 .main {
     grid-area: "main";
-    border: 2px solid green;
     display: grid;
     grid-template-columns: 3fr 1fr;
     overflow:auto;
@@ -35,7 +46,6 @@
 
 .posts {
     grid-column: 1/2;
-    border: 1px solid orange;
 }
 
 .lateralBar {
@@ -45,13 +55,9 @@
 
 .categoryBar, .subbredditsBar {
     min-height: 300px;
-    border: 1px solid yellow;
     padding: 30px;
     background-color: white;
-}
-
-.subbredditsBar {
-    border: 1px solid pink;
+    border-bottom: 2px solid black;
 }
 
 .categoryBar ul { padding: 15px 10px; }
