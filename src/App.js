@@ -13,6 +13,14 @@ const App = () => {
           <div className='posts'>
             <PostComp />
             <PostComp />
+            <PostComp />
+            <PostComp />
+            <PostComp />
+            <PostComp />
+            <PostComp />
+            <PostComp />
+            <PostComp />
+            <PostComp />
           </div>
           <div className='lateralBar'>
             <CategoryBar />
