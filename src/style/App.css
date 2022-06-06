@@ -70,12 +70,18 @@
     display: grid;
     grid-template-columns: 1fr 11fr;
     grid-template-rows: 11fr 1fr;
-    height: 500px;
+    min-height: 150px;
     margin: 20px;
     border-radius: 20px;
     background-color: white;
 }
 
-.postComp-lateral{ grid-area: 1/1/3/2; border: 1px solid red;}
-.postComp-main{ grid-area: 1/2/2/3; border: 1px solid darkred;}
-.postComp-baseline{ grid-area: 2/2/3/3; border: 1px solid lightcoral;}
+.postComp-lateral{ grid-area: 1/1/3/2; padding: 15px 5px; display: flex; flex-direction: column; align-items: center;}
+.postComp-lateral .arrow_top{ height: 30px; }
+.postComp-lateral .arrow_bottom{ height: 30px; transform: rotate(-180deg);}
+.postComp-lateral .lateral_number { padding: 10px 0;}
+
+.postComp-main{ grid-area: 1/2/2/3; padding: 20px; display: flex; flex-direction: column;}
+.postComp-main img { padding-top: 20px; height: 400px; align-self: center;}
+
+.postComp-baseline{ grid-area: 2/2/3/3; border-top: 2px solid lightgray; display: flex; padding: 0 40px; justify-content: space-between; align-items: center;} 
