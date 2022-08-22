@@ -92,3 +92,20 @@
 .postComp-main img { padding-top: 20px; height: 400px; align-self: center;}
 
 .postComp-baseline{ grid-area: 2/2/3/3; border-top: 2px solid lightgray; display: flex; padding: 0 40px; justify-content: space-between; align-items: center;} 
+
+.error{
+    grid-column: 1/2;
+    height: 250px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error h2{ margin-bottom: 15px; }
+
+.error button{ padding: 10px; background-color: white; border: 3px solid black;}
+
