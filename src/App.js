@@ -1,27 +1,16 @@
 import './style/App.css';
 
 import NavBar from "./components/NavBar";
-import PostComp from "./components/PostComponent";
 import CategoryBar from "./components/CategoriesBar";
 import SubredditsBar from "./components/SubredditsBar";
+import Home from './components/Home';
 
 const App = () => {
     return(
       <div className='body'>
         <NavBar />
         <div className='main'>
-          <div className='posts'>
-            <PostComp />
-            <PostComp />
-            <PostComp />
-            <PostComp />
-            <PostComp />
-            <PostComp />
-            <PostComp />
-            <PostComp />
-            <PostComp />
-            <PostComp />
-          </div>
+          <Home />
           <div className='lateralBar'>
             <CategoryBar />
             <SubredditsBar />

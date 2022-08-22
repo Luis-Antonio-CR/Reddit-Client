@@ -33,7 +33,7 @@ export const {
     getSubredditsSucces
 } = subRedditSlice.actions;
 
-export default getSubreddits.reducers;
+export default subRedditSlice.reducers;
 
 export const fetchSubReddits = () => async (dispatch) => {
     try{
