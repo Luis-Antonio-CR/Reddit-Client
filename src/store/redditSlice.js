@@ -6,7 +6,7 @@ const initialState = {
     error: false,
     isLoading: false,
     searchTerm: '',
-    selectedSubreddits: '/r/pics/'
+    selectedSubreddit: '/r/pics'
 
 };
 
