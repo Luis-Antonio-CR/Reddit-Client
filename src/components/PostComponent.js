@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import Skeleton from "react-loading-skeleton";
+import moment from "moment";
 import shortenNumber from "../utils/shortenNumber";
 
 import imgPost from "../assets/imgPost.jpeg";
@@ -60,13 +61,13 @@ const PostComp = (props) => {
                 </button>
             </div>
             <div className="postComp-main">
-                <h2 className="medium_text">Title</h2>
-                <img src={imgPost}/>
+                <h2 className="medium_text">{post.title}</h2>
+                <img src={post.url} alt="" />
             </div>
             <div className="postComp-baseline">
-                <h3>Comments</h3>
-                <h3>Time</h3>
-                <h3>Author</h3>
+                <h3>Comments: {shortenNumber(post.num_comments, 1)}</h3>
+                <h3>{moment.unix(post.created_utc).fromNow()}</h3>
+                <h3>{post.author}</h3>
             </div>
         </div>
     )
