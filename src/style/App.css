@@ -1,5 +1,5 @@
 /* ! Base Style */
-
+.small_text{ font-size: 14px; }
 .normal_text{ font-size: 20px; }
 .medium_text{ font-size: 25px; }
 
@@ -68,10 +68,25 @@
 }
 
 .categoryBar ul { padding: 15px 10px; }
-.categoryBar ul li{ padding: 5px 0 }
+.categoryBar ul li{ padding: 5px 0; }
 
 .subbredditsBar ul { padding: 15px 10px; }
-.subbredditsBar ul li{ padding: 5px 0 }
+.subbredditsBar ul li{ padding: 5px 0; }
+.subbredditsBar ul li button{
+    height: 50px;
+    width: 70%; 
+    background-color: white;
+    border: none;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    cursor: pointer;
+}
+.subbredditsBar ul li button img{
+    height: 40px;
+    max-width: 100px;
+    margin-right: 30px;
+}
 
 .postComp {
     display: grid;
