@@ -7,11 +7,11 @@ const initialState = {
     isLoading: false
 };
 
-const subRedditSlice = createSlice({
+const subredditSlice = createSlice({
     name: "subreddits",
     initialState,
     reducers: {
-        startGetSubReddits(state) {
+        startGetSubreddits(state) {
             state.isLoading = true;
             state.error = false;
         },
@@ -28,16 +28,16 @@ const subRedditSlice = createSlice({
 });
 
 export const {
-    startGetSubReddits,
+    startGetSubreddits,
     getSubredditsFailed,
     getSubredditsSucces
-} = subRedditSlice.actions;
+} = subredditSlice.actions;
 
-export default subRedditSlice.reducers;
+export default subredditSlice.reducer;
 
-export const fetchSubReddits = () => async (dispatch) => {
+export const fetchSubreddits = () => async (dispatch) => {
     try{
-        dispatch(startGetSubReddits());
+        dispatch(startGetSubreddits());
         const subreddits = await getSubreddits();
         dispatch(getSubredditsSucces(subreddits));
     }catch(error){
@@ -46,4 +46,4 @@ export const fetchSubReddits = () => async (dispatch) => {
     
 }
 
-export const selectSubReddits = (state) => state.subreddits.subreddits;
+export const selectSubreddits = (state) => state.subreddits.subreddits;
