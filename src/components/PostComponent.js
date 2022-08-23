@@ -55,7 +55,7 @@ const PostComp = (props) => {
                 <button type="button" onClick={() => onHandleVote(1)} >
                     {renderUpVote()}
                 </button>
-                <h3 className={`lateral_number ${getVoteType()} `}> {shortenNumber(props.ups, 1)} </h3>
+                <h3 className={`lateral_number ${getVoteType()} `}> {shortenNumber(post.ups, 1)} </h3>
                 <button type="button" onClick={() => onHandleVote(-1)} >
                     {renderDownVote()}
                 </button>

@@ -6,6 +6,10 @@ const SearchBar = () => {
     const [ searchTermLocal, setSearchTermLocal ] = useState('');
     const searchTerm = useSelector((state) => state.reddit.searchTerm);
     const dispatch = useDispatch();
+
+    useEffect(()=> {
+        setSearchTermLocal(searchTerm);
+    }, [searchTerm]);
     
     const handleSubmit = (e) => {
 
@@ -14,17 +18,13 @@ const SearchBar = () => {
     }
 
     const handleChange = (e) =>{
-        setSearchTermLocal = e.target.value;
+        setSearchTermLocal(e.target.value);
     }
-
-    useEffect(()=> {
-        setSearchTermLocal(searchTerm);
-    }, [searchTerm]);
 
     return(
         <div>
             <form onSubmit={handleSubmit} className="searchBar">
-                <input type="text" className="searchBar-text" onChange={handleChange} placeholder="Search"/>
+                <input type="text"  className="searchBar-text" onChange={handleChange} placeholder="Search"/>
                 <button type="submit" onClick={handleSubmit} className="searchBar-button">Search</button>
             </form>
         </div>

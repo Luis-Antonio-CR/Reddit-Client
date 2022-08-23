@@ -51,7 +51,7 @@ const Home = () => {
         )
     }
 
-    if(posts.lenght === 0){
+    if(posts.length === 0){
         return(
             <div className="error">
                 <h2 className="medium_text">No posts matching "{searchTerm}"</h2>

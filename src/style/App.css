@@ -77,7 +77,7 @@
     display: grid;
     grid-template-columns: 1fr 11fr;
     grid-template-rows: 11fr 1fr;
-    min-height: 150px;
+    min-height: 250px;
     margin: 20px;
     border-radius: 20px;
     background-color: white;
@@ -89,7 +89,8 @@
 .postComp-lateral .lateral_number { padding: 10px 0;}
 
 .postComp-main{ grid-area: 1/2/2/3; padding: 20px; display: flex; flex-direction: column;}
-.postComp-main img { padding-top: 20px; height: 400px; align-self: center;}
+.postComp-main h2 { margin-bottom: 20px;}
+.postComp-main img { height: 400px; align-self: center;}
 
 .postComp-baseline{ grid-area: 2/2/3/3; border-top: 2px solid lightgray; display: flex; padding: 0 40px; justify-content: space-between; align-items: center;} 
 

@@ -33,7 +33,7 @@ const redditSlice = createSlice({
             state.searchTerm = action.payload;
         },
         setSelectedSubreddit(state,action){
-            state.selectedSubreddits = action.payload;
+            state.selectedSubreddit = action.payload;
             state.searchTerm = '';
         },
         toggleShowingComments(state, action){
