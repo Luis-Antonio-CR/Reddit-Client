@@ -62,7 +62,9 @@ const PostComp = (props) => {
             </div>
             <div className="postComp-main">
                 <h2 className="medium_text">{post.title}</h2>
-                <img src={post.url} alt="" />
+                <div className={`postComp-main_img ${post.url === "" && "img_notPresent"}`} >
+                    <img src={post.url} alt="" />
+                </div>
             </div>
             <div className="postComp-baseline">
                 <h3>Comments: {shortenNumber(post.num_comments, 1)}</h3>

@@ -6,6 +6,7 @@
 .body {
     font-family: 'Poppins', sans-serif;
     display: grid;
+    width: 100%;
     grid-template-rows: auto 1fr;
     grid-template-areas: "header" "main";
     height: 100vh;
@@ -41,34 +42,34 @@
     padding: 15px;
     font-size: 15px;
     border-radius: 10px;
-    
+    cursor: pointer;
 }
 
 .main {
     grid-area: "main";
     display: grid;
     grid-template-columns: 3fr 1fr;
-    overflow:auto;
+    overflow: auto;
 }
 
 .posts {
     grid-column: 1/2;
+    margin: 20px;
+    margin-right: 0;
 }
 
 .lateralBar {
     grid-column: 2/3;
+    margin: 20px;
     
 }
 
-.categoryBar, .subbredditsBar {
+.subbredditsBar {
     min-height: 300px;
     padding: 30px;
     background-color: white;
     border-bottom: 2px solid black;
 }
-
-.categoryBar ul { padding: 15px 10px; }
-.categoryBar ul li{ padding: 5px 0; }
 
 .subbredditsBar ul { padding: 15px 10px; }
 .subbredditsBar ul li{ padding: 5px 0; }
@@ -91,11 +92,10 @@
 .postComp {
     display: grid;
     grid-template-columns: 1fr 11fr;
-    grid-template-rows: 11fr 1fr;
     min-height: 250px;
-    margin: 20px;
     border-radius: 20px;
     background-color: white;
+    margin-bottom: 20px;
 }
 
 .postComp-lateral{ grid-area: 1/1/3/2; padding: 15px 5px; display: flex; flex-direction: column; align-items: center;}
@@ -105,9 +105,18 @@
 
 .postComp-main{ grid-area: 1/2/2/3; padding: 20px; display: flex; flex-direction: column;}
 .postComp-main h2 { margin-bottom: 20px;}
-.postComp-main img { height: 400px; align-self: center;}
+.postComp-main .postComp-main_img {align-self: center;}
+.postComp-main .postComp-main_img img { height: 400px;}
+.postComp-main .img_notPresent {display: none;}
 
-.postComp-baseline{ grid-area: 2/2/3/3; border-top: 2px solid lightgray; display: flex; padding: 0 40px; justify-content: space-between; align-items: center;} 
+.postComp-baseline{ 
+    grid-area: 2/2/3/3; 
+    border-top: 2px solid lightgray; 
+    display: flex; padding: 10px 40px; 
+    justify-content: space-between; 
+    align-items: center; 
+    align-self:flex-end;
+} 
 
 .error{
     grid-column: 1/2;
